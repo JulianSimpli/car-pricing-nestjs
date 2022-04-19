@@ -14,7 +14,7 @@ export class UsersService {
   }
 
   async findOne(id: number) {
-    return await this.userExists(id);
+    return !id ? null : await this.userExists(id);
   }
 
   find(email: string) {
